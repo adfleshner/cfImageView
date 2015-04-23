@@ -17,11 +17,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
+
 }
+
 
 publish {
     userOrg = 'air-adfleshner'
-    groupId = 'com.flesh.'
+    groupId = 'com.flesh'
     artifactId = 'cf-views'
     version = '0.0.1'
     description = 'Allows you to Put all sorts of color filters all over those ImageViews.'
@@ -31,5 +36,4 @@ publish {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
