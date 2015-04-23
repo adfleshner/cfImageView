@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'bintray-release'
 
 android {
     compileSdkVersion 22
@@ -8,7 +9,7 @@ android {
         minSdkVersion 11
         targetSdkVersion 22
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
     }
     buildTypes {
         release {
@@ -16,6 +17,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+}
+
+publish {
+    userOrg = 'air-adfleshner'
+    groupId = 'com.flesh.'
+    artifactId = 'cf-views'
+    version = '0.0.1'
+    description = 'Allows you to Put all sorts of color filters all over those ImageViews.'
+    website = 'https://github.com/adfleshner/cfImageView'
+    issueTracker = "${website}/issues"
+    repository = "${website}.git"
 }
 
 dependencies {
